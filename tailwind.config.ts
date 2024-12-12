@@ -7,10 +7,32 @@ export default {
     "./src/app/**/*.{js,ts,jsx,tsx,mdx}",
   ],
   theme: {
+    container: {
+      center: true,
+      padding: "16px",
+      screens: {
+        xl: "1440px",
+        lg: "1025px",
+        md: "992px",
+        sm: "768px",
+      },
+    },
     extend: {
       colors: {
-        background: "var(--background)",
-        foreground: "var(--foreground)",
+        primary: "var(--color-primary)",
+        secondary: "var(--color-secondary)",
+        accent: "var(--color-accent)",
+        text: "var(--color-text)",
+        primary_gradient: "var(--gradient-primary)",
+      },
+
+      fontFamily: {
+        primary: ["var(--font-primary)", "sans-serif"],
+        secondary: ["var(--font-secondary)", "sans-serif"],
+      },
+      backgroundImage: {
+        primary_gradient: "var(--gradient-primary)",
+        secondary_graient: "var(--gradient-secondary)",
       },
     },
   },

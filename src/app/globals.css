@@ -5,12 +5,53 @@
 :root {
   --color-primary: #5f0a87;
   --color-secondary: #a4508b;
+  --color-tertiary: #23a6d5;
+  --color-quaternery: #23d5ab;
+  --color-accent: #222222;
   --color-text: #191308;
   --gradient-primary: linear-gradient(
     172deg,
-    var(--color-primary) 74%,
-    var(--color-secondary) 0%
+    var(--color-primary),
+    var(--color-secondary)
   );
-  --font-primary: "Ubuntu";
-  --font-secondary: "Open Sans";
+  --gradient-secondary: linear-gradient(
+    93deg,
+    var(--color-primary),
+    var(--color-secondary) 74%
+  );
+}
+
+.gradient-animation {
+  background: linear-gradient(
+    -45deg,
+    var(--color-secondary),
+    var(--color-primary),
+    var(--color-tertiary),
+    var(--color-quaternery)
+  );
+  background-size: 400% 400%;
+  animation: gradient 40s ease infinite;
+}
+
+.wind-turbine {
+}
+
+.stroked-heading {
+  background: white;
+  color: var(--color-primary);
+  -webkit-background-clip: text;
+  background-clip: text;
+  -webkit-text-stroke: 4px transparent;
+}
+
+@keyframes gradient {
+  0% {
+    background-position: 0% 50%;
+  }
+  50% {
+    background-position: 100% 50%;
+  }
+  100% {
+    background-position: 0% 50%;
+  }
 }

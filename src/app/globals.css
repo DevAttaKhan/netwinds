@@ -33,9 +33,6 @@
   animation: gradient 40s ease infinite;
 }
 
-.wind-turbine {
-}
-
 .stroked-heading {
   background: white;
   color: var(--color-primary);

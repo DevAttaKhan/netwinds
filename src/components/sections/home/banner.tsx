@@ -1,7 +1,8 @@
 "use client";
 import { BANNER } from "./data";
 import windTurbine from "@/assets/lottie/wind-turbine-white.json";
-import Lottie from "@lottielab/lottie-player/react";
+// import Lottie from "@lottielab/lottie-player/react";
+import Lottie from "react-lottie-player";
 export const Banner = () => {
   return (
     <section className="gradient-animation h-screen  md:flex items-center py-28 md:py-52 lg:py-[calc(208px_+_88px)] overflow-hidden">
@@ -16,7 +17,9 @@ export const Banner = () => {
         </div>
 
         <Lottie
-          lottie={windTurbine}
+          loop
+          play
+          animationData={windTurbine}
           className="wind-turbine shrink-0 w-right-clamp"
         />
       </div>

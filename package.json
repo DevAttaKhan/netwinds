@@ -9,12 +9,12 @@
     "lint": "next lint"
   },
   "dependencies": {
-    "@lottielab/lottie-player": "^1.1.2",
     "classnames": "^2.5.1",
     "lucide-react": "^0.468.0",
     "next": "15.1.0",
     "react": "^19.0.0",
-    "react-dom": "^19.0.0"
+    "react-dom": "^19.0.0",
+    "react-lottie-player": "^2.1.0"
   },
   "devDependencies": {
     "@eslint/eslintrc": "^3",

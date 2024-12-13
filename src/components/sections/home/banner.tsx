@@ -5,9 +5,9 @@ import windTurbine from "@/assets/lottie/wind-turbine-white.json";
 const Lottie = dynamic(() => import("react-lottie-player"), { ssr: false });
 export const Banner = () => {
   return (
-    <section className="gradient-animation relative h-screen overflow-hidden">
-      <div className="container flex flex-col   ">
-        <div className="left max-w-[400px] md:max-w-[660px] ">
+    <section className="gradient-animation flex items-center relative h-screen overflow-hidden">
+      <div className="container flex flex-col bg-black bg-opacity-20 py-5  ">
+        <div className="left max-w-[400px] md:max-w-[660px]  ">
           <h1 className="text-white text-center md:text-left text-3xl md:text-4xl lg:text-5xl font-primary font-bold mb-4">
             {BANNER.heaing}
           </h1>

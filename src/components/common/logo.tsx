@@ -5,7 +5,7 @@ export const Logo = () => {
   return (
     <Link
       href="/"
-      className="font-primary font-bold text-2xl md:text-3xl lg:text-5xl"
+      className="font-primary font-bold text-xl md:text-2xl lg:text-4xl"
     >
       Netwinds.
     </Link>

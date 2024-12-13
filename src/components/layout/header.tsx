@@ -36,7 +36,7 @@ const NAV_ITEMS = [
     name: "Let's have a project",
     href: "/contact",
     className:
-      "text-sm lg:text-base !capitalize !font-normal px-5 py-2 md:px-7 md:py-3 gradient-animation rounded-md ml-4",
+      "text-sm xl:text-base !capitalize !font-normal px-3 py-2 md:px-5 md:py-2 gradient-animation rounded-md ml-4",
   },
 ];
 
@@ -80,9 +80,13 @@ export const Header = () => {
     <Link
       key={item.id}
       href={item.href}
-      className={cn("uppercase transition", item.className, {
-        "hover:text-secondary": arr.length - 1 !== index,
-      })}
+      className={cn(
+        "uppercase text-sm xl:text-base transition",
+        item.className,
+        {
+          "hover:text-secondary": arr.length - 1 !== index,
+        }
+      )}
       onClick={() => setIsNavOpen(false)} // Close menu on link click
     >
       {item.name}
@@ -90,7 +94,7 @@ export const Header = () => {
   ));
 
   return (
-    <header className="fixed top-0 left-0 right-0 z-50 py-3 md:py-5 bg-accent text-white shadow-lg">
+    <header className="fixed top-0 left-0 right-0 z-50 py-2 md:py-4 bg-accent text-white shadow-lg">
       <div className="container flex items-center justify-between">
         <Logo />
         <div

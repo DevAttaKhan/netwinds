@@ -21,6 +21,8 @@ export default {
       colors: {
         primary: "var(--color-primary)",
         secondary: "var(--color-secondary)",
+        tertiary: "var(--color-tertiary)",
+        quaternery: "var(--color-quaternery)",
         accent: "var(--color-accent)",
         text: "var(--color-text)",
         primary_gradient: "var(--gradient-primary)",
@@ -33,6 +35,10 @@ export default {
       backgroundImage: {
         primary_gradient: "var(--gradient-primary)",
         secondary_graient: "var(--gradient-secondary)",
+      },
+
+      width: {
+        "right-clamp": "clamp(300px, 20.917vw, 536px)",
       },
     },
   },

@@ -1,8 +1,8 @@
 "use client";
+import dynamic from "next/dynamic";
 import { BANNER } from "./data";
 import windTurbine from "@/assets/lottie/wind-turbine-white.json";
-// import Lottie from "@lottielab/lottie-player/react";
-import Lottie from "react-lottie-player";
+const Lottie = dynamic(() => import("react-lottie-player"), { ssr: false });
 export const Banner = () => {
   return (
     <section className="gradient-animation h-screen  md:flex items-center py-28 md:py-52 lg:py-[calc(208px_+_88px)] overflow-hidden">

@@ -3,7 +3,6 @@
 import { Logo } from "../common";
 import cn from "classnames";
 import Link from "next/link";
-import { MenuIcon } from "@/assets/icons";
 import { useRef, useState, useEffect } from "react";
 import { Hamburger } from "../ui/hamburger";
 

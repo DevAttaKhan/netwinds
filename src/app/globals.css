@@ -41,6 +41,15 @@
   -webkit-text-fill-color: transparent;
 }
 
+.gradient-heading--stroked {
+  background: var(--gradient-primary);
+  -webkit-background-clip: text;
+  background-clip: text;
+  -webkit-text-fill-color: #f1f1f1;
+  -webkit-text-stroke: 8px transparent;
+  letter-spacing: 2px;
+}
+
 .border-gradient {
   background: radial-gradient(
         circle at 100% 100%,

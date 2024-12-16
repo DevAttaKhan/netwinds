@@ -2,3 +2,8 @@ export * from "./menu.icon";
 export * from "./folder.icon";
 export * from "./bag.icon";
 export * from "./monitor.icon";
+export * from "./pencil-ruler.icon";
+export * from "./flash.icon";
+export * from "./bulb.icon";
+export * from "./chart.icon";
+export * from "./headphone.icon";

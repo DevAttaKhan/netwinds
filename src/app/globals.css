@@ -33,12 +33,12 @@
   animation: gradient 40s ease infinite;
 }
 
-.stroked-heading {
-  background: white;
-  color: var(--color-primary);
+.gradient-heading {
+  background: #121fcf;
+  background: var(--gradient-primary);
   -webkit-background-clip: text;
   background-clip: text;
-  -webkit-text-stroke: 4px transparent;
+  -webkit-text-fill-color: transparent;
 }
 
 @keyframes gradient {

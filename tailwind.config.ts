@@ -40,6 +40,9 @@ export default {
       width: {
         "right-clamp": "clamp(300px, 20.917vw, 536px)",
       },
+      boxShadow: {
+        service: "0 0 10px rgba(0,0,0,0.25)",
+      },
     },
   },
   plugins: [],

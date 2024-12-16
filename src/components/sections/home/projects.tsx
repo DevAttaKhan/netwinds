@@ -1,6 +1,4 @@
-import React from "react";
 import { PROJECTS } from "./data";
-
 import { ProjectCard } from "@/components/common/project-card";
 
 export const Projects = () => {

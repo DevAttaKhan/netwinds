@@ -1,4 +1,4 @@
-import { Banner, Services, WhyUs } from "@/components/sections/home";
+import { Banner, Projects, Services, WhyUs } from "@/components/sections/home";
 
 const HomePage = () => {
   return (
@@ -6,6 +6,7 @@ const HomePage = () => {
       <Banner />
       <Services />
       <WhyUs />
+      <Projects />
     </>
   );
 };

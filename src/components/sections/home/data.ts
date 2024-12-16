@@ -8,6 +8,7 @@ import {
   MonitorIcon,
   PencilRulerIcon,
 } from "@/assets/icons";
+import projectPreview from "@/assets/images/projects/avatar.png";
 
 export const BANNER = {
   heaing: "Empowering Your Digital Presence with Cutting Edge Web solutions",
@@ -83,6 +84,63 @@ export const WHY_US = {
       title: "Here When You Need Us",
       description:
         "Our team provides ongoing support to address any challenges, ensuring your website remains up-to-date and functional.",
+    },
+  ],
+};
+
+export const PROJECTS = {
+  heading: "Our Work Speaks for Itself",
+  subheading:
+    "Explore the diverse range of industries we’ve worked with and the technologies that power our tailored solutions.",
+
+  projects: [
+    {
+      id: 1,
+      img: projectPreview,
+      meta: "E-Commerce | Retail | React, Node.js, Shopify",
+      title: "E-Commerce Store",
+      description:
+        'A concise description of the project, highlighting the value delivered.Example: "Designed and developed a high-performance online store for [Client Name], resulting in a 40% increase in sales and improved user engagement.',
+    },
+    {
+      id: 12,
+      img: projectPreview,
+      meta: "E-Commerce | Retail | React, Node.js, Shopify",
+      title: "E-Commerce Store",
+      description:
+        'A concise description of the project, highlighting the value delivered.Example: "Designed and developed a high-performance online store for [Client Name], resulting in a 40% increase in sales and improved user engagement.',
+    },
+    {
+      id: 13,
+      img: projectPreview,
+      meta: "E-Commerce | Retail | React, Node.js, Shopify",
+      title: "E-Commerce Store",
+      description:
+        'A concise description of the project, highlighting the value delivered.Example: "Designed and developed a high-performance online store for [Client Name], resulting in a 40% increase in sales and improved user engagement.',
+    },
+    {
+      id: 14,
+      img: projectPreview,
+      meta: "E-Commerce | Retail | React, Node.js, Shopify",
+      title: "E-Commerce Store",
+      description:
+        'A concise description of the project, highlighting the value delivered.Example: "Designed and developed a high-performance online store for [Client Name], resulting in a 40% increase in sales and improved user engagement.',
+    },
+    {
+      id: 15,
+      img: projectPreview,
+      meta: "E-Commerce | Retail | React, Node.js, Shopify",
+      title: "E-Commerce Store",
+      description:
+        'A concise description of the project, highlighting the value delivered.Example: "Designed and developed a high-performance online store for [Client Name], resulting in a 40% increase in sales and improved user engagement.',
+    },
+    {
+      id: 16,
+      img: projectPreview,
+      meta: "E-Commerce | Retail | React, Node.js, Shopify",
+      title: "E-Commerce Store",
+      description:
+        'A concise description of the project, highlighting the value delivered.Example: "Designed and developed a high-performance online store for [Client Name], resulting in a 40% increase in sales and improved user engagement.',
     },
   ],
 };

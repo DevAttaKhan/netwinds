@@ -10,9 +10,9 @@ export const MenuIcon = ({ width = 18, height = 14 }) => {
       <path
         d="M1 7H17M1 1H17M1 13H17"
         stroke="url(#paint0_linear_61_7)"
-        stroke-width="2"
-        stroke-linecap="round"
-        stroke-linejoin="round"
+        strokeWidth="2"
+        strokeLinecap="round"
+        strokeLinejoin="round"
       />
       <defs>
         <linearGradient
@@ -23,8 +23,8 @@ export const MenuIcon = ({ width = 18, height = 14 }) => {
           y2="33.9632"
           gradientUnits="userSpaceOnUse"
         >
-          <stop stop-color="#D15DAF" />
-          <stop offset="0.789026" stop-color="#5F0A87" />
+          <stop stopColor="#D15DAF" />
+          <stop offset="0.789026" stopColor="#5F0A87" />
         </linearGradient>
       </defs>
     </svg>

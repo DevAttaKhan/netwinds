@@ -14,7 +14,7 @@ export const Projects = () => {
           </p>
         </div>
 
-        <div className="mx-auto mt-14 md:mt-20 lg:mt-28 grid content-center grid-cols-[repeat(auto-fit,minmax(250px,1fr))] gap-6  ">
+        <div className="mx-auto mt-14 md:mt-20 lg:mt-28 grid content-center grid-cols-[repeat(auto-fit,minmax(300px,1fr))] gap-6  ">
           {PROJECTS.projects.map((project) => (
             <ProjectCard key={project.id} data={project} />
           ))}

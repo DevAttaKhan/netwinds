@@ -20,6 +20,15 @@ export const ProjectCard: React.FC<Props> = ({
       <p className="text-text text-sm font-secondary mb-3">{meta}</p>
       <h5 className="font-bold font-primary text-xl mb-2">{title}</h5>
       <p>{description}</p>
+
+      <div className="flex items-center justify-between gap-2 mt-5">
+        <button className="border-gradient py-2 flex-1 font-secondary font-bold rounded-lg">
+          Visit Site
+        </button>
+        <button className="gradient-animation py-2 flex-1 font-secondary text-white font-bold rounded-lg">
+          Case Study
+        </button>
+      </div>
     </div>
   );
 };

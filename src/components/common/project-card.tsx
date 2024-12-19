@@ -13,7 +13,7 @@ export const ProjectCard: React.FC<Props> = ({
   data: { img, meta, title, description },
 }) => {
   return (
-    <div className="rounded-3xl shadow-service p-4">
+    <div className="rounded-3xl shadow-service p-4 max-w-[350px]">
       <div className="rounded-2xl overflow-hidden mb-3">
         <Image src={img.src} width={400} height={188} alt="title" priority />
       </div>

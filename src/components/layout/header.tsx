@@ -5,8 +5,15 @@ import cn from "classnames";
 import Link from "next/link";
 import { useRef, useState, useEffect } from "react";
 import { Hamburger } from "../ui/hamburger";
+import { usePathname } from "next/navigation";
 
 const NAV_ITEMS = [
+  {
+    id: "0",
+    name: "Home",
+    href: "/",
+    className: "",
+  },
   {
     id: "1",
     name: "About",
@@ -43,12 +50,16 @@ const NAV_ITEMS = [
 export const Header = () => {
   const [isNavOpen, setIsNavOpen] = useState(false);
   const navRef = useRef<HTMLDivElement | null>(null);
-
   const buttonRef = useRef<HTMLButtonElement | null>(null);
+  const pathname = usePathname();
+
+  const isActive = (href: string) => {
+    if (href === "/") return pathname === "/";
+    return pathname.startsWith(href);
+  };
 
   // Function to handle outside click
   const handleOutsideClick = (e: MouseEvent) => {
-    // Check if the click is outside both the nav menu and the menu button
     if (
       navRef.current &&
       !navRef.current.contains(e.target as Node) &&
@@ -59,7 +70,6 @@ export const Header = () => {
     }
   };
 
-  // Attach and detach outside click listener
   useEffect(() => {
     if (isNavOpen) {
       document.addEventListener("mousedown", handleOutsideClick);
@@ -76,22 +86,29 @@ export const Header = () => {
     setIsNavOpen((prev) => !prev);
   };
 
-  const navItems = NAV_ITEMS.map((item, index, arr) => (
-    <Link
-      key={item.id}
-      href={item.href}
-      className={cn(
-        "uppercase text-sm xl:text-base transition",
-        item.className,
-        {
-          "hover:text-secondary": arr.length - 1 !== index,
-        }
-      )}
-      onClick={() => setIsNavOpen(false)} // Close menu on link click
-    >
-      {item.name}
-    </Link>
-  ));
+  const navItems = NAV_ITEMS.map((item, index, arr) => {
+    const isCta = arr.length - 1 === index;
+    const active = isActive(item.href);
+
+    return (
+      <Link
+        key={item.id}
+        href={item.href}
+        className={cn(
+          "uppercase text-sm xl:text-base transition",
+          item.className,
+          {
+            "hover:text-secondary": !isCta,
+            "text-secondary": active && !isCta,
+          }
+        )}
+        aria-current={active ? "page" : undefined}
+        onClick={() => setIsNavOpen(false)}
+      >
+        {item.name}
+      </Link>
+    );
+  });
 
   return (
     <header className="fixed top-0 left-0 right-0 z-50 py-2 md:py-4 bg-accent text-white shadow-lg">
@@ -109,15 +126,12 @@ export const Header = () => {
         >
           {navItems}
         </div>
-        {/* <button aria-label="Toggle navigation menu"> */}
-        {/* <MenuIcon width={24} height={25} /> */}
         <Hamburger
           isActive={isNavOpen}
           ref={buttonRef}
           className="block md:hidden z-50"
           onClick={toggleNav}
         />
-        {/* </button> */}
       </div>
     </header>
   );

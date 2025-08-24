@@ -1,5 +1,6 @@
 export * from "./banner";
 export * from "./services";
 export * from "./why-us";
-export * from "./projects";
 export * from "./cta";
+export * from "./work-process";
+export * from "./projects";

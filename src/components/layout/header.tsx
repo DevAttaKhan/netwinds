@@ -43,7 +43,7 @@ const NAV_ITEMS = [
     name: "Let's have a project",
     href: "/contact",
     className:
-      "text-sm xl:text-base !capitalize !font-normal px-3 py-2 md:px-5 md:py-2 gradient-animation rounded-md ml-4",
+      "text-sm xl:text-base !capitalize !font-normal px-3 py-2 md:px-5 md:py-2 bg-gradient-primary text-white rounded-md ml-4 hover:scale-105 transition-transform duration-300",
   },
 ];
 
@@ -95,11 +95,12 @@ export const Header = () => {
         key={item.id}
         href={item.href}
         className={cn(
-          "uppercase text-sm xl:text-base transition",
+          "uppercase text-sm xl:text-base transition-colors duration-300 font-semibold",
           item.className,
           {
-            "hover:text-secondary": !isCta,
-            "text-secondary": active && !isCta,
+            "hover:text-primary": !isCta,
+            "text-primary": active && !isCta,
+            "text-secondary": !active && !isCta,
           }
         )}
         aria-current={active ? "page" : undefined}
@@ -111,13 +112,13 @@ export const Header = () => {
   });
 
   return (
-    <header className="fixed top-0 left-0 right-0 z-50 py-2 md:py-4 bg-accent text-white shadow-lg">
+    <header className="fixed top-0 left-0 right-0 z-50 py-2 md:py-4 bg-white/95 backdrop-blur-md text-secondary shadow-lg border-b border-neutral">
       <div className="container flex items-center justify-between">
         <Logo />
         <div
           ref={navRef}
           className={cn(
-            "flex flex-col md:flex-row items-center justify-center gap-6 font-bold font-secondary z-50 fixed top-12 right-0 max-w-[350px] w-full h-screen md:h-auto md:static md:max-w-none md:w-auto bg-accent transition-transform duration-300",
+            "flex flex-col md:flex-row items-center justify-center gap-6 font-bold font-primary z-50 fixed top-12 right-0 max-w-[350px] w-full h-screen md:h-auto md:static md:max-w-none md:w-auto bg-white/95 backdrop-blur-md md:bg-transparent transition-transform duration-300",
             {
               "translate-x-0": isNavOpen,
               "translate-x-full md:translate-x-0": !isNavOpen,

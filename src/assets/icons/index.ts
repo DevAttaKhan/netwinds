@@ -7,3 +7,4 @@ export * from "./flash.icon";
 export * from "./bulb.icon";
 export * from "./chart.icon";
 export * from "./headphone.icon";
+export * from "./beetle.icon";

@@ -1,36 +1,81 @@
-This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://nextjs.org/docs/app/api-reference/cli/create-next-app).
+# BeetleBytes - Modern Digital Agency
 
-## Getting Started
+A cutting-edge digital agency website built with Next.js 15, TypeScript, Tailwind CSS, and Framer Motion. BeetleBytes represents a modern, professional, and authentic digital agency with a creative edge.
 
-First, run the development server:
+## 🎨 Theme & Design
 
-```bash
-npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-# or
-bun dev
-```
+**Modern Beetle-Inspired Theme:**
+- **Primary Colors**: Emerald-600 (#059669) with lime-400 (#A3E635) accents
+- **Secondary Colors**: Dark slate gradients (#0F172A → #1E293B)
+- **Typography**: Work Sans font family for a modern, geometric sans-serif look
+- **Branding**: Bold "BeetleBytes" identity with subtle beetle-inspired accents
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+## ✨ Features
 
-You can start editing the page by modifying `app/page.tsx`. The page auto-updates as you edit the file.
+- **Modern UI/UX**: Clean, professional design with subtle hover effects
+- **Smooth Animations**: Framer Motion-powered scroll-triggered animations
+- **Responsive Design**: Mobile-first approach with Tailwind CSS
+- **Performance**: Built with Next.js 15 and optimized for speed
+- **Accessibility**: Semantic HTML and proper ARIA labels
 
-This project uses [`next/font`](https://nextjs.org/docs/app/building-your-application/optimizing/fonts) to automatically optimize and load [Geist](https://vercel.com/font), a new font family for Vercel.
+## 🚀 Tech Stack
 
-## Learn More
+- **Framework**: Next.js 15 with App Router
+- **Language**: TypeScript
+- **Styling**: Tailwind CSS with custom design system
+- **Animations**: Framer Motion
+- **Icons**: Custom SVG icons + Lucide React
+- **Fonts**: Work Sans (Google Fonts)
 
-To learn more about Next.js, take a look at the following resources:
+## 🎯 Key Sections
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
+1. **Hero Banner**: Dramatic reveal with beetle-inspired graphics
+2. **Services**: Card-based layout showcasing core offerings
+3. **Why Choose Us**: Feature highlights with modern cards
+4. **Portfolio**: Project showcase with hover effects
+5. **Call-to-Action**: Engaging conversion section
 
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js) - your feedback and contributions are welcome!
+## 🛠️ Getting Started
 
-## Deploy on Vercel
+1. **Install dependencies:**
+   ```bash
+   npm install
+   ```
 
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
+2. **Run development server:**
+   ```bash
+   npm run dev
+   ```
 
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/app/building-your-application/deploying) for more details.
+3. **Build for production:**
+   ```bash
+   npm run build
+   ```
+
+## 🎨 Customization
+
+The theme is easily customizable through:
+- `tailwind.config.ts` - Color palette and design tokens
+- `src/app/globals.css` - Global styles and component classes
+- Component-level styling with Tailwind utilities
+
+## 📱 Responsive Design
+
+- Mobile-first approach
+- Breakpoints: sm (640px), md (768px), lg (1024px), xl (1280px)
+- Optimized for all device sizes
+
+## 🔧 Development
+
+- ESLint configuration for code quality
+- TypeScript for type safety
+- Component-based architecture
+- Modular CSS with Tailwind
+
+## 📄 License
+
+This project is private and proprietary to BeetleBytes.
+
+---
+
+**BeetleBytes** - Empowering your digital presence with cutting-edge web solutions.

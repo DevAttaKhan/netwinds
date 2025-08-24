@@ -5,6 +5,7 @@ import {
   Services,
   WhyUs,
 } from "@/components/sections/home";
+import { WorkProcess } from "@/components/sections/home/work-process";
 
 const HomePage = () => {
   return (
@@ -12,8 +13,9 @@ const HomePage = () => {
       <Banner />
       <Services />
       <WhyUs />
-      <Projects />
+      <WorkProcess />
       <Cta />
+      <Projects />
     </>
   );
 };

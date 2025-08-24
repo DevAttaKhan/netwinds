@@ -1,5 +1,5 @@
 {
-  "name": "netwinds",
+  "name": "beetlebytes",
   "version": "0.1.0",
   "private": true,
   "scripts": {
@@ -10,6 +10,7 @@
   },
   "dependencies": {
     "classnames": "^2.5.1",
+    "framer-motion": "^11.18.2",
     "lucide-react": "^0.468.0",
     "next": "15.1.0",
     "react": "^19.0.0",

@@ -22,7 +22,7 @@ const SOCIALS: Array<{
 
 export const Footer = () => {
   return (
-    <footer className="bg-accent text-white">
+    <footer className="bg-gradient-secondary text-white">
       <div className="container py-12 md:py-16">
         <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-10">
           <div className="col-span-1">
@@ -38,7 +38,7 @@ export const Footer = () => {
                   target="_blank"
                   rel="noreferrer noopener"
                   aria-label={s.name}
-                  className="p-2 rounded-md transition hover:bg-white/10"
+                  className="p-2 rounded-md transition-all duration-300 hover:bg-accent/20 hover:scale-110"
                 >
                   <Lucide name={s.icon} size={20} color="#ffffff" />
                 </Link>
@@ -47,13 +47,13 @@ export const Footer = () => {
           </div>
 
           <div>
-            <h6 className="font-primary font-bold text-lg mb-4">Quick Links</h6>
+            <h6 className="font-primary font-bold text-lg mb-4 text-accent">Quick Links</h6>
             <ul className="space-y-3">
               {QUICK_LINKS.map((l) => (
                 <li key={l.name}>
                   <Link
                     href={l.href}
-                    className="text-sm md:text-base opacity-90 hover:opacity-100 hover:text-secondary transition"
+                    className="text-sm md:text-base opacity-90 hover:opacity-100 hover:text-accent transition-colors duration-300"
                   >
                     {l.name}
                   </Link>
@@ -63,8 +63,8 @@ export const Footer = () => {
           </div>
 
           <div>
-            <h6 className="font-primary font-bold text-lg mb-4">Services</h6>
-            <ul className="space-y-3">
+            <h6 className="font-primary font-bold text-lg mb-4 text-accent">Services</h6>
+            <ul className="space-y-3 opacity-90">
               <li>Web Design & Development</li>
               <li>E-Commerce Solutions</li>
               <li>Custom Development</li>
@@ -72,20 +72,20 @@ export const Footer = () => {
           </div>
 
           <div>
-            <h6 className="font-primary font-bold text-lg mb-4">Contact</h6>
+            <h6 className="font-primary font-bold text-lg mb-4 text-accent">Contact</h6>
             <ul className="space-y-3 opacity-90 text-sm md:text-base">
               <li>
                 <a
-                  href="mailto:hello@netwinds.dev"
-                  className="hover:text-secondary transition"
+                  href="mailto:hello@beetlebytes.dev"
+                  className="hover:text-accent transition-colors duration-300"
                 >
-                  hello@netwinds.dev
+                  hello@beetlebytes.dev
                 </a>
               </li>
               <li>
                 <a
                   href="tel:+1234567890"
-                  className="hover:text-secondary transition"
+                  className="hover:text-accent transition-colors duration-300"
                 >
                   +1 (234) 567-890
                 </a>
@@ -99,14 +99,14 @@ export const Footer = () => {
       <div className="border-t border-white/10">
         <div className="container py-6 flex flex-col sm:flex-row items-center justify-between gap-3">
           <p className="text-xs md:text-sm opacity-80">
-            © {new Date().getFullYear()} Netwinds. All rights reserved.
+            © {new Date().getFullYear()} BeetleBytes. All rights reserved.
           </p>
           <div className="flex items-center gap-4 text-xs md:text-sm opacity-80">
-            <Link href="/privacy" className="hover:text-secondary transition">
+            <Link href="/privacy" className="hover:text-accent transition-colors duration-300">
               Privacy Policy
             </Link>
             <span className="opacity-40">|</span>
-            <Link href="/terms" className="hover:text-secondary transition">
+            <Link href="/terms" className="hover:text-accent transition-colors duration-300">
               Terms of Service
             </Link>
           </div>

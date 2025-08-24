@@ -8,7 +8,6 @@ import {
   TestTube, 
   Rocket, 
   RefreshCw,
-  ArrowRight,
   CheckCircle2
 } from "lucide-react";
 
@@ -22,28 +21,7 @@ export const WorkProcess = () => {
     RefreshCw
   };
 
-  const containerVariants = {
-    hidden: { opacity: 0 },
-    visible: {
-      opacity: 1,
-      transition: {
-        staggerChildren: 0.2,
-      },
-    },
-  };
 
-  const itemVariants = {
-    hidden: { opacity: 0, y: 50, scale: 0.9 },
-    visible: {
-      opacity: 1,
-      y: 0,
-      scale: 1,
-      transition: {
-        duration: 0.8,
-        ease: "easeOut",
-      },
-    },
-  };
 
   const floatingVariants = {
     animate: {
@@ -58,9 +36,9 @@ export const WorkProcess = () => {
   };
 
   return (
-    <section className="section-padding bg-gradient-to-br from-white via-neutral/10 to-white relative overflow-hidden">
+    <section className="section-padding bg-gradient-to-br from-white via-neutral/10 to-white relative">
       {/* Background decorative elements */}
-      <div className="absolute inset-0 pointer-events-none">
+      <div className="absolute inset-0 pointer-events-none overflow-hidden">
         <motion.div
           className="absolute top-20 left-20 w-32 h-32 bg-gradient-primary/5 rounded-full blur-3xl"
           variants={floatingVariants}
@@ -84,174 +62,132 @@ export const WorkProcess = () => {
         {/* Two Column Layout with working sticky positioning */}
         <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 lg:gap-20 items-start">
           
-          {/* Left Sidebar - Sticky Content */}
-          <motion.div
-            initial={{ opacity: 0, x: -50 }}
-            whileInView={{ opacity: 1, x: 0 }}
-            viewport={{ once: true }}
-            transition={{ duration: 0.8, ease: "easeOut" }}
-            className="order-1 lg:sticky lg:top-32"
-          >
-            <motion.div 
-              className="max-w-lg"
-              initial={{ opacity: 0, y: 20 }}
-              whileInView={{ opacity: 1, y: 0 }}
+          {/* Left Content - Sticky */}
+          <div className="order-1 lg:sticky lg:top-32 self-start h-fit">
+            <motion.div
+              initial={{ opacity: 0, x: -50 }}
+              whileInView={{ opacity: 1, x: 0 }}
               viewport={{ once: true }}
-              transition={{ duration: 0.6, delay: 0.2, ease: "easeOut" }}
+              transition={{ duration: 0.8, ease: "easeOut" }}
             >
-              {/* Badge */}
               <motion.div
-                className="inline-flex items-center gap-3 mb-8 px-6 py-3 bg-gradient-primary/10 rounded-full border border-primary/20"
-                initial={{ opacity: 0, scale: 0.8 }}
-                whileInView={{ opacity: 1, scale: 1 }}
-                viewport={{ once: true }}
-                transition={{ duration: 0.6, delay: 0.2 }}
-              >
-                <div className="w-2 h-2 bg-accent rounded-full"></div>
-                <span className="text-sm font-semibold text-primary uppercase tracking-wider">
-                  Our Process
-                </span>
-                <div className="w-2 h-2 bg-accent rounded-full"></div>
-              </motion.div>
+            className="inline-flex items-center gap-3 mb-6 px-4 py-2 bg-gradient-primary/10 rounded-full border border-primary/20"
+            initial={{ opacity: 0, scale: 0.8 }}
+            whileInView={{ opacity: 1, scale: 1 }}
+            viewport={{ once: true }}
+            transition={{ duration: 0.6, delay: 0.2 }}
+          >
+            <div className="w-2 h-2 bg-accent rounded-full"></div>
+            <span className="text-sm font-semibold text-primary uppercase tracking-wider">
+              Our Process
+            </span>
+            <div className="w-2 h-2 bg-accent rounded-full"></div>
+          </motion.div>
 
-              {/* Main Heading */}
               <motion.h2 
-                className="text-4xl md:text-5xl lg:text-6xl font-bold mb-8 leading-tight"
+                className="text-3xl sm:text-4xl lg:text-5xl font-bold text-secondary leading-tight mb-6"
                 initial={{ opacity: 0, y: 20 }}
                 whileInView={{ opacity: 1, y: 0 }}
                 viewport={{ once: true }}
                 transition={{ duration: 0.6, delay: 0.4, ease: "easeOut" }}
               >
-                <span className="text-gradient-primary">How We Bring</span> Your
-                <br />
-                <span className="text-secondary">Vision to Life</span>
+                How We Bring Your{" "}
+                <span className="text-transparent bg-clip-text bg-gradient-primary">
+                  Vision to Life
+                </span>
               </motion.h2>
-              
-              {/* Subheading */}
+
               <motion.p 
-                className="text-xl text-secondary-light leading-relaxed mb-12"
+                className="text-base sm:text-lg text-secondary-light leading-relaxed mb-6"
                 initial={{ opacity: 0, y: 20 }}
                 whileInView={{ opacity: 1, y: 0 }}
                 viewport={{ once: true }}
                 transition={{ duration: 0.6, delay: 0.6, ease: "easeOut" }}
               >
-                {WORK_PROCESS.subheading}
+                Our proven design process ensures every project delivers exceptional results. From initial concept to final launch, 
+                we guide you through each step with transparency, collaboration, and attention to detail.
               </motion.p>
 
-              {/* Key Benefits */}
-              <motion.div 
-                className="space-y-4"
+              <motion.p 
+                className="text-base sm:text-lg text-secondary-light leading-relaxed"
                 initial={{ opacity: 0, y: 20 }}
                 whileInView={{ opacity: 1, y: 0 }}
                 viewport={{ once: true }}
                 transition={{ duration: 0.6, delay: 0.8, ease: "easeOut" }}
               >
-                <div className="flex items-center gap-3 text-secondary-light">
-                  <CheckCircle2 className="w-5 h-5 text-accent flex-shrink-0" />
-                  <span>Proven methodology with 100+ successful projects</span>
-                </div>
-                <div className="flex items-center gap-3 text-secondary-light">
-                  <CheckCircle2 className="w-5 h-5 text-accent flex-shrink-0" />
-                  <span>Transparent communication at every step</span>
-                </div>
-                <div className="flex items-center gap-3 text-secondary-light">
-                  <CheckCircle2 className="w-5 h-5 text-accent flex-shrink-0" />
-                  <span>On-time delivery with quality assurance</span>
-                </div>
-              </motion.div>
-
-              {/* CTA Button */}
-              <motion.div
-                className="mt-12"
-                initial={{ opacity: 0, y: 20 }}
-                whileInView={{ opacity: 1, y: 0 }}
-                viewport={{ once: true }}
-                transition={{ duration: 0.6, delay: 1.0, ease: "easeOut" }}
-              >
-                <button className="btn-primary text-lg px-8 py-4 group">
-                  <span className="flex items-center gap-2">
-                    Let&apos;s Discuss Your Project
-                    <ArrowRight className="w-5 h-5 group-hover:translate-x-1 transition-transform duration-300" />
-                  </span>
-                </button>
-              </motion.div>
+                Each phase builds upon the previous one, creating a solid foundation for success. We believe in iterative design 
+                and continuous feedback to ensure the final product exceeds your expectations.
+              </motion.p>
             </motion.div>
-          </motion.div>
+          </div>
 
-          {/* Right Side - Scrollable Process Cards */}
-          <div className="order-2 space-y-8">
-            <motion.div 
-              variants={containerVariants}
-              initial="hidden"
-              whileInView="visible"
-              viewport={{ once: true }}
-            >
+          {/* Right Cards */}
+          <div className="order-2">
+            <div className="grid grid-cols-1 sm:grid-cols-2 gap-6 lg:gap-8">
               {WORK_PROCESS.steps.map((step, index) => {
                 const IconComponent = iconMap[step.icon as keyof typeof iconMap];
                 
                 return (
                   <motion.div
                     key={step.id}
-                    className="group relative"
-                    variants={itemVariants}
+                    initial={{ opacity: 0, y: 50, scale: 0.9 }}
+                    whileInView={{ opacity: 1, y: 0, scale: 1 }}
+                    viewport={{ once: true }}
+                    transition={{ 
+                      duration: 0.6, 
+                      delay: index * 0.15, 
+                      ease: "easeOut" 
+                    }}
+                    className="group relative p-6 lg:p-8 bg-white rounded-2xl shadow-lg hover:shadow-2xl transition-all duration-500 transform hover:-translate-y-2 border border-neutral/20 hover:border-primary/30"
+                    whileHover={{ scale: 1.02 }}
                   >
-                    {/* Process Card - Redesigned to match image */}
-                    <div className="relative bg-white rounded-2xl p-8 shadow-lg hover:shadow-2xl transition-all duration-500 border border-neutral/20 hover:border-primary/30 group-hover:scale-[1.02]">
-                      
-                      {/* Step Number Badge */}
-                      <div className="absolute -top-4 left-8 w-12 h-12 bg-gradient-primary rounded-full flex items-center justify-center text-white font-bold text-lg shadow-lg">
-                        {String(step.id).padStart(2, '0')}
-                      </div>
-                      
-                      {/* Icon positioned to the right */}
-                      <div className="absolute top-6 right-6 w-12 h-12 bg-gradient-primary/10 rounded-xl flex items-center justify-center group-hover:scale-110 transition-transform duration-300">
-                        {IconComponent && (
-                          <IconComponent className="w-6 h-6 text-primary" />
-                        )}
-                      </div>
-                      
-                      {/* Content */}
-                      <div className="pr-20">
-                        <h3 className="text-2xl font-bold text-secondary mb-4 group-hover:text-primary transition-colors duration-300">
-                          {step.title}
-                        </h3>
-                        
-                        <p className="text-secondary-light leading-relaxed mb-6">
-                          {step.description}
-                        </p>
-                        
-                        {/* Learn More Link */}
-                        <div className="flex items-center gap-2 text-accent hover:text-primary font-semibold transition-colors duration-300 cursor-pointer group/link">
-                          <span>Learn More</span>
-                          <ArrowRight className="w-4 h-4 group-hover/link:translate-x-1 transition-transform duration-300" />
-                        </div>
-                      </div>
-                      
-                      {/* Hover Accent Line */}
-                      <div className="absolute bottom-0 left-0 h-1 bg-gradient-to-r from-primary to-accent rounded-b-2xl transform scale-x-0 group-hover:scale-x-100 transition-transform duration-500 origin-left"></div>
-                      
-                      {/* Corner Accent */}
-                      <div className="absolute top-4 right-4 w-2 h-2 bg-accent rounded-full opacity-0 group-hover:opacity-100 transition-all duration-500 transform scale-0 group-hover:scale-100"></div>
+                    {/* Step Number Badge */}
+                    <div className="absolute z-10 -top-3 -right-3 w-8 h-8 bg-gradient-primary text-white rounded-full flex items-center justify-center text-sm font-bold shadow-lg">
+                      {String(step.id).padStart(2, '0')}
                     </div>
-                    
-                    {/* Connection Arrow (except for last item) */}
-                    {index < WORK_PROCESS.steps.length - 1 && (
-                      <div className="flex justify-center mt-6">
+
+                    {/* Icon */}
+                    <div className="w-14 h-14 rounded-xl flex items-center justify-center bg-gradient-primary mb-6 group-hover:scale-110 transition-transform duration-300 shadow-lg">
+                      {IconComponent && (
+                        <IconComponent className="w-6 h-6 text-white" />
+                      )}
+                    </div>
+
+                    {/* Content */}
+                    <h3 className="font-bold text-xl text-secondary mb-3 group-hover:text-primary transition-colors duration-300">
+                      {step.title}
+                    </h3>
+                    <p className="text-secondary-light text-sm leading-relaxed mb-4">
+                      {step.description}
+                    </p>
+
+                    {/* Features List */}
+                    <div className="space-y-2">
+                      {step.details?.map((detail, detailIndex) => (
                         <motion.div
-                          className="w-8 h-8 bg-gradient-primary rounded-full flex items-center justify-center text-white shadow-lg"
-                          initial={{ opacity: 0, scale: 0 }}
-                          whileInView={{ opacity: 1, scale: 1 }}
+                          key={detail}
+                          className="flex items-center gap-2 text-sm text-secondary-light"
+                          initial={{ opacity: 0, x: -10 }}
+                          whileInView={{ opacity: 1, x: 0 }}
                           viewport={{ once: true }}
-                          transition={{ duration: 0.6, delay: index * 0.1 }}
+                          transition={{ 
+                            duration: 0.4, 
+                            delay: (index * 0.15) + (detailIndex * 0.1) + 0.3, 
+                            ease: "easeOut" 
+                          }}
                         >
-                          <ArrowRight className="w-4 h-4" />
+                          <CheckCircle2 size={16} className="text-accent flex-shrink-0" />
+                          <span>{detail}</span>
                         </motion.div>
-                      </div>
-                    )}
+                      ))}
+                    </div>
+
+                    {/* Hover Effect Border */}
+                    <div className="absolute inset-0 rounded-2xl border-2 border-transparent group-hover:border-primary/30 transition-colors duration-300" />
                   </motion.div>
                 );
               })}
-            </motion.div>
+            </div>
           </div>
         </div>
       </div>

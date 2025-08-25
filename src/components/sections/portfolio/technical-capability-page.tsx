@@ -33,14 +33,13 @@ interface Capability {
   description: string;
   icon: string;
   color: string;
-  technologies: string[];
+  technologies: Technology[];
   codeExample: string;
   features: string[];
   detailedDescription: string;
   benefits: string[];
   useCases: string[];
   codeExamples: CodeExample[];
-  technologies: Technology[];
 }
 
 interface Props {

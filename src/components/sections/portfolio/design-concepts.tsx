@@ -6,67 +6,10 @@ import {
   Monitor, 
   Tablet, 
   Eye,
-  ArrowRight,
-  Sparkles
+  ArrowRight
 } from "lucide-react";
 import Link from "next/link";
-
-const DESIGN_CONCEPTS = [
-  {
-    id: 1,
-    title: "Modern E-commerce Platform",
-    description: "A sleek, conversion-focused online store design with intuitive navigation and mobile-first approach.",
-    category: "E-commerce",
-    features: ["Mobile-first design", "Conversion optimization", "Modern UI/UX", "Accessibility focused"],
-    mockup: "ecommerce-mockup",
-    color: "from-blue-500 to-cyan-400"
-  },
-  {
-    id: 2,
-    title: "SaaS Dashboard Interface",
-    description: "Clean, professional dashboard with data visualization and user-friendly controls for business applications.",
-    category: "SaaS",
-    features: ["Data visualization", "User management", "Responsive design", "Dark/Light themes"],
-    mockup: "saas-dashboard",
-    color: "from-purple-500 to-pink-400"
-  },
-  {
-    id: 3,
-    title: "Healthcare Patient Portal",
-    description: "Trust-building medical interface with easy appointment booking and secure patient information access.",
-    category: "Healthcare",
-    features: ["HIPAA compliant", "Appointment booking", "Patient portal", "Trust-focused design"],
-    mockup: "healthcare-portal",
-    color: "from-emerald-500 to-green-400"
-  },
-  {
-    id: 4,
-    title: "Educational Learning Platform",
-    description: "Engaging learning management system with interactive courses and progress tracking.",
-    category: "Education",
-    features: ["Course management", "Progress tracking", "Interactive elements", "Mobile learning"],
-    mockup: "education-platform",
-    color: "from-orange-500 to-red-400"
-  },
-  {
-    id: 5,
-    title: "Restaurant Ordering System",
-    description: "Streamlined food ordering experience with menu browsing and online payment integration.",
-    category: "Food & Beverage",
-    features: ["Menu browsing", "Online ordering", "Payment integration", "Order tracking"],
-    mockup: "restaurant-ordering",
-    color: "from-yellow-500 to-orange-400"
-  },
-  {
-    id: 6,
-    title: "Real Estate Listing Site",
-    description: "Property showcase platform with advanced search filters and virtual tour capabilities.",
-    category: "Real Estate",
-    features: ["Property search", "Virtual tours", "Advanced filters", "Contact forms"],
-    mockup: "real-estate",
-    color: "from-indigo-500 to-purple-400"
-  }
-];
+import { DESIGN_CONCEPTS } from "./design-concepts-data";
 
 const DEVICE_MOCKUPS = [
   { name: "Desktop", icon: Monitor, size: "w-16 h-16" },
@@ -201,7 +144,7 @@ export const DesignConcepts = () => {
                 <div className="absolute inset-0 bg-black/10"></div>
                 <div className="relative z-10 text-center">
                   <Eye className="w-12 h-12 text-white mx-auto mb-3" />
-                  <p className="text-white font-semibold text-sm">{concept.mockup}</p>
+                  <p className="text-white font-semibold text-sm">{concept.title}</p>
                 </div>
                 {/* Decorative elements */}
                 <div className="absolute top-4 right-4 w-3 h-3 bg-white/20 rounded-full"></div>
@@ -240,16 +183,16 @@ export const DesignConcepts = () => {
               </div>
 
               {/* View Concept Button */}
-              <Link 
-                href="/contact"
-                className="w-full group/btn flex items-center justify-center gap-2 px-4 py-2 bg-gradient-primary/10 text-primary font-medium rounded-lg border border-primary/20 hover:bg-gradient-primary hover:text-white transition-all duration-300"
-              >
-                <span>View Concept</span>
-                <ArrowRight className="w-4 h-4 group-hover/btn:translate-x-1 transition-transform duration-300" />
-              </Link>
+                          <Link
+              href={`/portfolio/design/${concept.slug}`}
+              className="w-full group/btn flex items-center justify-center gap-2 px-4 py-2 bg-gradient-primary/10 text-primary font-medium rounded-lg border border-primary/20 hover:bg-gradient-primary hover:text-white transition-all duration-300"
+            >
+              <span>View Concept</span>
+              <ArrowRight className="w-4 h-4 group-hover/btn:translate-x-1 transition-transform duration-300" />
+            </Link>
 
               {/* Hover Effect Border */}
-              <div className="absolute inset-0 rounded-2xl border-2 border-transparent group-hover:border-primary/30 transition-colors duration-300" />
+              <div className="absolute -z-10 inset-0 rounded-2xl border-2 border-transparent group-hover:border-primary/30 transition-colors duration-300" />
             </motion.div>
           ))}
         </motion.div>

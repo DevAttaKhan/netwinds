@@ -6,7 +6,7 @@ export const TECHNICAL_CAPABILITIES = [
     description: "Modern, responsive web applications built with cutting-edge technologies.",
     icon: "Code2",
     color: "from-blue-500 to-cyan-400",
-    technologies: ["React 18", "Next.js 15", "TypeScript", "Tailwind CSS", "Framer Motion"],
+
     codeExample: "const App = () => {\n  return <div>Hello World</div>;\n};",
     features: ["Component-based architecture", "State management", "Performance optimization", "Accessibility"],
     detailedDescription: "We specialize in building modern, responsive web applications using the latest frontend technologies. Our approach focuses on creating scalable, maintainable code that delivers exceptional user experiences across all devices.",
@@ -133,7 +133,7 @@ export const useScrollAnimation = () => {
     description: "Scalable server-side solutions with robust data management.",
     icon: "Database",
     color: "from-emerald-500 to-green-400",
-    technologies: ["Node.js", "Express", "PostgreSQL", "MongoDB", "GraphQL"],
+
     codeExample: "app.get('/api/users', (req, res) => {\n  res.json(users);\n});",
     features: ["RESTful APIs", "Database design", "Authentication", "Security"],
     detailedDescription: "We build robust, scalable backend systems that power modern web applications. Our expertise includes API development, database design, authentication systems, and security implementations.",
@@ -265,7 +265,7 @@ export default pool;`
     description: "Cross-platform mobile applications and progressive web apps.",
     icon: "Smartphone",
     color: "from-orange-500 to-red-400",
-    technologies: ["React Native", "PWA", "Mobile-first design", "Performance"],
+
     codeExample: "const MobileApp = () => {\n  return <View><Text>Mobile</Text></View>;\n};",
     features: ["Native performance", "Offline support", "Push notifications", "App store deployment"],
     detailedDescription: "We create cross-platform mobile solutions that deliver native-like performance while maintaining code efficiency. Our mobile apps work seamlessly across iOS and Android with offline capabilities and push notifications.",
@@ -418,7 +418,7 @@ const App = () => {
     description: "Lightning-fast websites optimized for search engines and user experience.",
     icon: "Zap",
     color: "from-yellow-500 to-orange-400",
-    technologies: ["Core Web Vitals", "Lighthouse", "SEO", "CDN", "Caching"],
+
     codeExample: "export const metadata = {\n  title: 'Optimized Page',\n  description: 'Fast & SEO-friendly'\n};",
     features: ["Page speed optimization", "SEO best practices", "Performance monitoring", "User experience"],
     detailedDescription: "We optimize websites for maximum performance and search engine visibility. Our approach focuses on Core Web Vitals, SEO best practices, and creating exceptional user experiences that convert visitors into customers.",
@@ -539,7 +539,7 @@ getTTFB(sendToAnalytics);`
     description: "Reliable deployment and hosting with continuous integration.",
     icon: "Cloud",
     color: "from-purple-500 to-pink-400",
-    technologies: ["AWS", "Vercel", "Docker", "CI/CD", "Monitoring"],
+
     codeExample: "version: '3.8'\nservices:\n  web:\n    build: .\n    ports:\n      - '3000:3000'",
     features: ["Cloud deployment", "Automated testing", "Continuous deployment", "Monitoring & alerts"],
     detailedDescription: "We implement modern DevOps practices and cloud infrastructure solutions that ensure reliable, scalable, and secure deployments. Our approach includes automated testing, continuous integration, and comprehensive monitoring.",

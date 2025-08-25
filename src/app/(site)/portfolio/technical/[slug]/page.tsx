@@ -4,9 +4,7 @@ import { getCapabilityBySlug, getAllCapabilitySlugs } from "@/components/section
 import { TechnicalCapabilityPage } from "@/components/sections/portfolio/technical-capability-page";
 
 interface Props {
-  params: {
-    slug: string;
-  };
+  params: Promise<{ slug: string }>;
 }
 
 export async function generateStaticParams() {
@@ -17,7 +15,8 @@ export async function generateStaticParams() {
 }
 
 export async function generateMetadata({ params }: Props): Promise<Metadata> {
-  const capability = getCapabilityBySlug(params.slug);
+  const { slug } = await params;
+  const capability = getCapabilityBySlug(slug);
   
   if (!capability) {
     return {
@@ -31,8 +30,9 @@ export async function generateMetadata({ params }: Props): Promise<Metadata> {
   };
 }
 
-export default function TechnicalCapabilityPageRoute({ params }: Props) {
-  const capability = getCapabilityBySlug(params.slug);
+export default async function TechnicalCapabilityPageRoute({ params }: Props) {
+  const { slug } = await params;
+  const capability = getCapabilityBySlug(slug);
 
   if (!capability) {
     notFound();

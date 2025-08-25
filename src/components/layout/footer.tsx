@@ -26,7 +26,7 @@ export const Footer = () => {
       <div className="container py-12 md:py-16">
         <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-10">
           <div className="col-span-1">
-            <Logo />
+            <Logo  bytesClassName="text-primary" />
             <p className="mt-4 text-sm md:text-base max-w-xs opacity-90">
               Crafting performant, accessible, and beautiful web experiences.
             </p>
